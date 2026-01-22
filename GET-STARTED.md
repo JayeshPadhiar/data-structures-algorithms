@@ -3,6 +3,7 @@
 **Welcome to your comprehensive DSA preparation system!**
 
 Everything is now set up and ready for you. Here's how to begin your journey to DSA mastery.
+Let's get started!
 
 ---
 
