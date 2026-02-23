@@ -1,6 +1,6 @@
 # DSA Learning Progress Tracker
 
-**Last Updated:** February 11, 2026  
+**Last Updated:** February 23, 2026  
 **Status:** Building Momentum 🚀
 
 ---
@@ -10,28 +10,28 @@
 | Metric | Value |
 |--------|-------|
 | **Total Topics** | 119 |
-| **Completed** | 1 |
+| **Completed** | 2 |
 | **In Progress** | 0 |
-| **Remaining** | 118 |
-| **Completion Rate** | 0.8% |
-| **Estimated Hours Spent** | 6-8 |
-| **Estimated Hours Remaining** | 394-592 |
+| **Remaining** | 117 |
+| **Completion Rate** | 1.7% |
+| **Estimated Hours Spent** | 12-16 |
+| **Estimated Hours Remaining** | 388-584 |
 
 ---
 
 ## 🎯 Current Focus
 
 **Phase:** 1 - Fundamentals  
-**Topic:** 1.2 - Arrays Advanced Concepts  
+**Topic:** 1.3 - Strings Fundamentals  
 **Status:** Ready to Start  
 
 ---
 
 ## Phase 1: Fundamentals ⏳
-**Progress: 1/8 topics (12.5%)**
+**Progress: 2/8 topics (25%)**
 
 - [x] **1.1** Time & Space Complexity Analysis _(6-8 hours)_ ✅
-- [ ] **1.2** Arrays Advanced Concepts _(6-8 hours)_
+- [x] **1.2** Arrays Advanced Concepts _(6-8 hours)_ ✅
 - [ ] **1.3** Strings Fundamentals _(6-8 hours)_
 - [ ] **1.4** Two Pointers Technique _(5-6 hours)_
 - [ ] **1.5** Sliding Window Pattern _(5-6 hours)_
