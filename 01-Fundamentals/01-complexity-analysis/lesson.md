@@ -788,86 +788,121 @@ function recursiveDoubleCall(n) {
 
 ## 9. Practice Problems
 
+**Note:** This lesson focuses on ANALYZING complexity, not solving. Focus on understanding WHY different approaches have different complexities.
+
 ### Easy Problems
 
-1. **Time Complexity Analysis**
-   - LeetCode #1: Two Sum
-   - Analyze: What's the time complexity of nested loop solution vs hash map solution?
-   - Goal: Understand O(n²) vs O(n)
+1. **O(n²) vs O(n) Analysis** - LeetCode #1: Two Sum
+   - Analyze: Nested loop solution vs hash map solution
+   - Concepts: Quadratic vs linear time, space-time tradeoff
+   - Goal: Understand how hash maps reduce time complexity
 
-2. **Space Complexity Analysis**
-   - LeetCode #283: Move Zeroes
-   - Analyze: Can you solve in O(1) space?
-   - Goal: Understand in-place vs extra space
+2. **O(1) Space Analysis** - LeetCode #136: Single Number
+   - Analyze: XOR approach O(1) space vs hash set O(n) space
+   - Concepts: Constant space, bit manipulation benefits
+   - Goal: Recognize O(1) space algorithms
 
-3. **Simple Complexity Comparison**
-   - LeetCode #344: Reverse String
-   - Analyze: What's the time and space complexity?
-   - Goal: Analyze simple algorithms
+3. **In-Place Algorithms** - LeetCode #26: Remove Duplicates from Sorted Array
+   - Analyze: In-place two-pointer O(1) space vs creating new array O(n) space
+   - Concepts: Space optimization, in-place modification
+   - Goal: Understand space complexity tradeoffs
 
-4. **Identifying Patterns**
-   - LeetCode #217: Contains Duplicate
-   - Analyze: Compare brute force vs hash set approach
-   - Goal: Recognize when to use hash structures
+4. **Hash Set Complexity** - LeetCode #217: Contains Duplicate
+   - Analyze: Brute force O(n²) vs hash set O(n)
+   - Concepts: When hash structures optimize time
+   - Goal: Recognize hash set use cases
 
-5. **Loop Analysis**
-   - LeetCode #350: Intersection of Two Arrays II
-   - Analyze: Different approaches and their complexities
-   - Goal: Practice analyzing multiple solutions
+5. **Multiple Input Variables** - LeetCode #350: Intersection of Two Arrays II
+   - Analyze: Different approaches (sorting, hash map, two pointers)
+   - Concepts: O(n+m) notation, multiple variables
+   - Goal: Analyze complexity with multiple inputs
+
+6. **Nested Conditionals** - LeetCode #121: Best Time to Buy and Sell Stock
+   - Analyze: Brute force O(n²) vs one-pass O(n)
+   - Concepts: Recognizing optimization opportunities
+   - Goal: Analyze how tracking min/max reduces complexity
 
 ### Medium Problems
 
-1. **Logarithmic Complexity**
-   - LeetCode #33: Search in Rotated Sorted Array
-   - Analyze: Why is modified binary search still O(log n)?
+7. **Logarithmic Complexity** - LeetCode #33: Search in Rotated Sorted Array
+   - Analyze: Why modified binary search is still O(log n)
+   - Concepts: Dividing search space, log n patterns
    - Goal: Master log n analysis
 
-2. **Sorting Analysis**
-   - LeetCode #75: Sort Colors
-   - Analyze: O(n log n) vs O(n) solutions
-   - Goal: Understand when you can beat comparison sort bounds
+8. **Sorting vs Counting** - LeetCode #347: Top K Frequent Elements
+   - Analyze: Sorting O(n log n) vs heap O(n log k) vs bucket sort O(n)
+   - Concepts: Beating comparison sort bounds
+   - Goal: Understand when you can do better than O(n log n)
 
-3. **Space-Time Tradeoff**
-   - LeetCode #560: Subarray Sum Equals K
-   - Analyze: O(n²) time O(1) space vs O(n) time O(n) space
-   - Goal: Understand tradeoffs
+9. **Space-Time Tradeoff** - LeetCode #560: Subarray Sum Equals K
+   - Analyze: O(n²) time/O(1) space vs O(n) time/O(n) space
+   - Concepts: Trading space for time
+   - Goal: Analyze and justify tradeoffs
 
-4. **Recursion Complexity**
-   - LeetCode #70: Climbing Stairs
-   - Analyze: Recursive vs iterative vs DP approaches
-   - Goal: Analyze recursive solutions
+10. **Recursion Complexity** - LeetCode #70: Climbing Stairs
+    - Analyze: Naive recursion O(2ⁿ) vs memoization O(n) vs iteration O(n)
+    - Concepts: Exponential vs linear, recursion call stack
+    - Goal: Analyze recursive solutions
 
-5. **Two Pointer Analysis**
-   - LeetCode #15: 3Sum
-   - Analyze: Why is this O(n²) and not O(n³)?
-   - Goal: Analyze optimization techniques
+11. **Prefix Sum Optimization** - LeetCode #238: Product of Array Except Self
+    - Analyze: Different approaches and their complexity
+    - Concepts: O(n) single pass with clever technique
+    - Goal: Recognize optimization patterns
+
+12. **Nested Loops Analysis** - LeetCode #36: Valid Sudoku
+    - Analyze: Nested loops for validation
+    - Concepts: Analyzing nested iterations, hash set usage
+    - Goal: Count operations in validation logic
 
 ### Hard Problems
 
-1. **Complex Analysis**
-   - LeetCode #4: Median of Two Sorted Arrays
-   - Analyze: Why O(log(min(m,n)))?
-   - Goal: Master complex algorithmic analysis
+13. **Advanced In-Place** - LeetCode #41: First Missing Positive
+    - Analyze: How O(n) time O(1) space is achieved
+    - Concepts: Using array indices cleverly, constant space tricks
+    - Goal: Analyze advanced space optimization
 
-2. **Amortized Analysis**
-   - LeetCode #155: Min Stack
-   - Analyze: Amortized O(1) for all operations
-   - Goal: Understand amortized complexity
+14. **Amortized Analysis** - LeetCode #155: Min Stack
+    - Analyze: Why all operations are amortized O(1)
+    - Concepts: Amortized complexity vs worst-case
+    - Goal: Understand amortized analysis
 
-3. **Divide and Conquer**
-   - LeetCode #23: Merge K Sorted Lists
-   - Analyze: Different approaches from O(kn) to O(n log k)
-   - Goal: Optimize using better data structures
+15. **Heap Optimization** - LeetCode #23: Merge K Sorted Lists
+    - Analyze: Naive O(kn) vs heap O(n log k)
+    - Concepts: Using better data structures to optimize
+    - Goal: Recognize when heaps reduce complexity
 
-4. **Dynamic Programming**
-   - LeetCode #72: Edit Distance
-   - Analyze: O(mn) time and space, then optimize space to O(n)
-   - Goal: Analyze DP complexity
+16. **2D DP Analysis** - LeetCode #72: Edit Distance
+    - Analyze: O(mn) time and space, then optimize to O(n) space
+    - Concepts: 2D DP table, space optimization techniques
+    - Goal: Analyze DP complexity and optimize space
 
-5. **Advanced Patterns**
-   - LeetCode #295: Find Median from Data Stream
-   - Analyze: Using two heaps for O(log n) insert, O(1) find median
-   - Goal: Master advanced complexity analysis
+17. **Data Structure Design** - LeetCode #295: Find Median from Data Stream
+    - Analyze: Two heaps for O(log n) insert, O(1) median
+    - Concepts: Balancing operations, data structure choice
+    - Goal: Analyze complex data structure designs
+
+### Topic Coverage Matrix
+
+**Every major concept has dedicated problems:**
+
+| Concept | Problems Covering It |
+|---------|---------------------|
+| **O(1) - Constant** | #136, #26, #155, #295 (median query) |
+| **O(log n) - Logarithmic** | #33, #23 (heap), #295 (insert) |
+| **O(n) - Linear** | #1 (hash map), #136, #26, #217, #350, #560, #238, #41, #121 (optimized) |
+| **O(n log n) - Linearithmic** | #347 (sorting), #23 (heap approach) |
+| **O(n²) - Quadratic** | #1 (brute force), #217 (brute force), #121 (brute force) |
+| **O(2ⁿ) - Exponential** | #70 (naive recursion) |
+| **Space Complexity** | All problems analyze space |
+| **Space-Time Tradeoffs** | #1, #136, #26, #560, #238 |
+| **In-Place Algorithms** | #26, #41 |
+| **Nested Loops** | #36 (validation) |
+| **Amortized Analysis** | #155 |
+| **Multiple Variables** | #350 (n+m), #72 (mn) |
+| **Recursion Analysis** | #70 |
+| **Hash Structures** | #1, #217, #350, #560 |
+
+✅ **17 problems ensuring complete coverage of all complexity concepts!**
 
 ---
 

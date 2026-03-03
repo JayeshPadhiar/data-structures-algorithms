@@ -1069,81 +1069,120 @@ const result = chars.join('');
 
 ## 9. Practice Problems
 
+**Prerequisites:** Complexity Analysis (1.1), Arrays Advanced (1.2)  
+**Focus:** String manipulation, character operations, pattern matching, frequency analysis
+
 ### Easy Problems
 
-1. **Valid Palindrome**
-   - LeetCode #125
-   - Goal: Check if string is palindrome (ignoring non-alphanumeric)
-   - Concepts: Two pointers, character validation
+1. **Length of Last Word** - LeetCode #58
+   - Concepts: String traversal, trimming whitespace
+   - Goal: Navigate string from end, handle spaces
 
-2. **Valid Anagram**
-   - LeetCode #242
-   - Goal: Check if two strings are anagrams
-   - Concepts: Frequency map or sorting
+2. **Valid Anagram** - LeetCode #242
+   - Concepts: Character frequency, anagram detection
+   - Goal: Compare character counts (map or array)
 
-3. **Reverse String**
-   - LeetCode #344
-   - Goal: Reverse string in-place (as char array)
-   - Concepts: Two pointers
+3. **Implement strStr()** - LeetCode #28
+   - Concepts: Substring search, naive pattern matching
+   - Goal: Find first occurrence of pattern in text
 
-4. **First Unique Character**
-   - LeetCode #387
-   - Goal: Find first non-repeating character
-   - Concepts: Frequency map
+4. **First Unique Character** - LeetCode #387
+   - Concepts: Frequency map, first occurrence
+   - Goal: Two-pass: count frequencies, find first unique
 
-5. **Is Subsequence**
-   - LeetCode #392
+5. **Is Subsequence** - LeetCode #392
+   - Concepts: Two-pointer on strings, subsequence vs substring
    - Goal: Check if s is subsequence of t
-   - Concepts: Two pointers
+
+6. **Add Binary** - LeetCode #67
+   - Concepts: String building, carry arithmetic
+   - Goal: Add two binary strings, build result
+
+7. **Reverse Vowels of a String** - LeetCode #345
+   - Concepts: Two pointers, selective swapping
+   - Goal: Reverse only vowels in string
 
 ### Medium Problems
 
-1. **Longest Substring Without Repeating Characters**
-   - LeetCode #3
-   - Goal: Find length of longest substring with unique chars
-   - Concepts: Sliding window, hash set
+8. **Longest Substring Without Repeating Characters** - LeetCode #3
+   - Concepts: Sliding window intro, hash set
+   - Goal: Find longest substring with unique characters
 
-2. **Longest Palindromic Substring**
-   - LeetCode #5
-   - Goal: Find longest palindromic substring
-   - Concepts: Expand from center, DP
+9. **Longest Repeating Character Replacement** - LeetCode #424
+   - Concepts: Sliding window, frequency tracking
+   - Goal: Longest substring with same char after k replacements
 
-3. **Group Anagrams**
-   - LeetCode #49
-   - Goal: Group strings that are anagrams
-   - Concepts: Frequency map, hashing
+10. **Group Anagrams** - LeetCode #49
+    - Concepts: Hashing anagrams, grouping by signature
+    - Goal: Group strings that are anagrams together
 
-4. **String Compression**
-   - LeetCode #443
-   - Goal: Compress string in-place
-   - Concepts: Two pointers, in-place modification
+11. **String to Integer (atoi)** - LeetCode #8
+    - Concepts: String parsing, edge case handling
+    - Goal: Implement atoi with overflow handling
 
-5. **Longest Common Prefix**
-   - LeetCode #14
-   - Goal: Find longest common prefix in array of strings
-   - Concepts: Vertical/horizontal scanning
+12. **Longest Common Prefix** - LeetCode #14
+    - Concepts: Vertical/horizontal scanning
+    - Goal: Find longest common prefix in array of strings
 
-6. **Repeated DNA Sequences**
-   - LeetCode #187
-   - Goal: Find repeated 10-character substrings
-   - Concepts: Sliding window, hash set
+13. **Repeated DNA Sequences** - LeetCode #187
+    - Concepts: Sliding window, hash set for duplicates
+    - Goal: Find repeated 10-character substrings
+
+14. **Decode String** - LeetCode #394
+    - Concepts: Stack-based parsing, string building
+    - Goal: Decode encoded string with nested patterns
+
+15. **Compare Version Numbers** - LeetCode #165
+    - Concepts: String splitting, numeric comparison
+    - Goal: Compare two version strings
+
+16. **Longest Palindrome** - LeetCode #409
+    - Concepts: Character frequency, palindrome construction
+    - Goal: Find length of longest palindrome that can be built
 
 ### Hard Problems
 
-1. **Minimum Window Substring**
-   - LeetCode #76
-   - Goal: Find minimum window containing all characters of pattern
-   - Concepts: Sliding window, frequency map
+17. **Regular Expression Matching** - LeetCode #10
+    - Concepts: Pattern matching with . and *, recursion/DP
+    - Goal: Implement regex matching
 
-2. **Longest Substring with At Most K Distinct Characters**
-   - LeetCode #340 (Premium)
-   - Goal: Find longest substring with at most k distinct characters
-   - Concepts: Sliding window, hash map
+18. **Wildcard Matching** - LeetCode #44
+    - Concepts: Pattern matching with ? and *, DP
+    - Goal: Implement wildcard pattern matching
 
-3. **Palindrome Pairs**
-   - LeetCode #336
-   - Goal: Find pairs of words that form palindromes
-   - Concepts: Trie, string manipulation
+19. **Palindrome Pairs** - LeetCode #336
+    - Concepts: Trie data structure, palindrome checking
+    - Goal: Find pairs of words forming palindromes
+
+20. **Text Justification** - LeetCode #68
+    - Concepts: String formatting, space distribution
+    - Goal: Format text with justified alignment
+
+### Topic Coverage Matrix
+
+**Every major concept has dedicated problems:**
+
+| Concept | Problems Covering It |
+|---------|---------------------|
+| **String Traversal** | #58, #392, #345 |
+| **Character Frequency** | #242, #387, #49, #424, #409 |
+| **Anagram Detection** | #242, #49 |
+| **Subsequence vs Substring** | #392 (subsequence), #3 (substring) |
+| **Pattern Matching** | #28 (naive), #10 (regex), #44 (wildcard) |
+| **String Building** | #67 (binary), #394 (decode) |
+| **Palindrome Checking** | #409 (construction), #336 (pairs) |
+| **Two Pointers on Strings** | #345 (vowels), #392 (subsequence) |
+| **Sliding Window** | #3, #187, #424 |
+| **String Hashing** | #49 (anagram signature), #187 (sequence detection) |
+| **String Parsing** | #8 (atoi), #165 (version), #68 (justification) |
+| **Prefix Operations** | #14 (common prefix) |
+| **Nested Parsing** | #394 (stack-based) |
+| **Advanced Patterns** | #10, #44, #336 |
+| **String Immutability** | #67 (building strings efficiently) |
+
+✅ **20 problems ensuring complete coverage of all string concepts!**
+
+**Note:** Problems #125 (Valid Palindrome), #344 (Reverse String), and #76 (Minimum Window) are saved for Two Pointers lesson (1.4) where these techniques are covered in depth.
 
 ---
 

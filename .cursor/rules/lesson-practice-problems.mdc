@@ -1,0 +1,159 @@
+---
+description: Guidelines for practice problems in DSA lesson files
+globs: **/lesson.md
+alwaysApply: false
+---
+
+# Lesson Practice Problems Guidelines
+
+## Core Principles
+
+### 1. Complete Topic Coverage
+
+**Every concept/topic taught in a lesson MUST have at least one LeetCode problem covering it.**
+
+- Minimum 15 problems per lesson
+- Can have MORE than 15 if needed for complete coverage
+- Each major concept in the lesson should map to specific problems
+
+**Why:** Ensures every concept gets practical application and reinforcement.
+
+### 2. No Duplicate Problems Across Lessons
+
+Each LeetCode problem should appear in **exactly ONE lesson** throughout the entire curriculum.
+
+**Why:** Avoids redundant practice and ensures efficient learning progression.
+
+### 3. Progressive Concept Building
+
+Practice problems in each lesson should ONLY use concepts from:
+- The current lesson
+- All previous lessons
+
+**Never include problems that require future concepts.**
+
+**Why:** Creates a cumulative, progressive learning path where each lesson reinforces all prior knowledge.
+
+---
+
+## Rules for Problem Selection
+
+### ✅ DO
+
+```markdown
+Lesson 1.4 - Two Pointers (after Arrays & Strings)
+Problems can use:
+- Arrays (Lesson 1.2) ✓
+- Strings (Lesson 1.3) ✓
+- Two Pointers (Lesson 1.4) ✓
+
+Example: Valid Palindrome - uses strings + two pointers
+```
+
+### ❌ DON'T
+
+```markdown
+Lesson 1.4 - Two Pointers
+Problems should NOT use:
+- Linked Lists (not learned yet)
+- Trees (not learned yet)
+- Dynamic Programming (not learned yet)
+
+Example: Remove Nth Node From End - uses linked lists ✗
+         (Save this for Linked Lists lesson instead)
+```
+
+---
+
+## Before Adding Problems to a Lesson
+
+**Step 1: Map Topics to Problems**
+
+1. List all concepts/topics taught in the lesson
+2. For each concept, ensure at least one problem covers it
+3. Create a coverage matrix if needed
+
+**Step 2: Verify Problem Requirements**
+
+1. **Is this problem already used?**
+   - Search: `rg "LeetCode #XXX"` in the project
+   - If found, choose a different problem
+
+2. **Does it only use learned concepts?**
+   - List all concepts the problem requires
+   - Verify all concepts have been covered in current or previous lessons
+   - If requires future concepts, save for appropriate later lesson
+
+3. **Does it fit the lesson's focus?**
+   - Problem should primarily demonstrate the current lesson's technique
+   - Can use previous concepts as supporting knowledge
+
+**Step 3: Check Coverage**
+
+- Review all problems together
+- Ensure every major topic in lesson has representation
+- Add more problems if any topics are missing coverage
+- Aim for 15+ problems, more if needed for complete coverage
+
+---
+
+## Problem Allocation Strategy
+
+```
+Lesson N Practice Problems should:
+├── Focus on Lesson N's main concept (70%)
+├── Reinforce previous lessons (30%)
+└── Never require concepts from Lesson N+1 or later
+```
+
+---
+
+## Examples
+
+### ✅ Good Problem Selection
+
+**Lesson 1.5 - Sliding Window**
+- Prerequisites: Arrays (1.2), Strings (1.3), Two Pointers (1.4)
+- Problem: "Longest Substring Without Repeating Characters"
+- Uses: Strings ✓, Sliding Window ✓
+- Result: Perfect fit!
+
+### ❌ Bad Problem Selection
+
+**Lesson 1.4 - Two Pointers**
+- Prerequisites: Arrays (1.2), Strings (1.3)
+- Problem: "Linked List Cycle"
+- Uses: Linked Lists ✗ (not learned yet)
+- Result: Save for Lesson 2.1 - Linked Lists
+
+---
+
+## Topic Coverage Template
+
+Include a coverage matrix in each lesson's practice problems section:
+
+```markdown
+### Topic Coverage Matrix
+
+| Concept | Problems Covering It |
+|---------|---------------------|
+| Concept A | #123, #456 |
+| Concept B | #789, #234, #567 |
+| Concept C | #890 |
+```
+
+This ensures:
+- Visual verification that all topics are covered
+- Easy identification of coverage gaps
+- Clear mapping for students
+
+## Quick Reference
+
+**When creating/updating lesson.md files:**
+
+1. List all major topics/concepts taught in the lesson
+2. Map each topic to at least one problem
+3. Create a coverage matrix to visualize completeness
+4. Add more problems if any topic lacks coverage (15+ minimum)
+5. Search codebase to ensure problems aren't duplicated: `rg "LeetCode #XXX"`
+6. Verify problems only use current + previous lesson concepts

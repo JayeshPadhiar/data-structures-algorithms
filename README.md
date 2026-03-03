@@ -31,6 +31,18 @@ Your personal progress tracker. Check off topics as you complete them, see stati
 ### 4. **TUTOR-GUIDE.md**
 Instructions for how to interact with your AI tutor (me!) during conversational lessons.
 
+### 5. **PROBLEM-TRACKER.md**
+Comprehensive list of all LeetCode problems used across all lessons. Ensures:
+- No duplicate problems across lessons
+- Each problem appears in exactly ONE lesson
+- Progressive difficulty building on prior concepts
+
+### 6. **.cursor/rules/lesson-practice-problems.mdc**
+Automated rule that enforces practice problem guidelines when creating or updating lessons. Ensures:
+- Problems only use concepts from current and previous lessons
+- No forward references to future topics
+- Cumulative, progressive learning path
+
 ## 🚀 How to Use This System
 
 ### Step 1: Understand the Structure
