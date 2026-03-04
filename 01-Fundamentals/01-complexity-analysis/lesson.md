@@ -11,6 +11,7 @@
 ### What You'll Learn
 
 In this lesson, you'll master the fundamental skill of analyzing algorithm efficiency. You'll learn how to:
+
 - Measure and compare algorithm performance
 - Use Big O, Omega, and Theta notations
 - Analyze both time and space complexity
@@ -45,6 +46,7 @@ Time and space complexity analysis is **the foundation of all DSA work**. Before
 **Complexity** is a way to measure how an algorithm's resource usage (time or memory) grows as the input size increases.
 
 Think of it like this: Imagine you're a chef preparing meals.
+
 - If you're cooking for 2 people vs 20 people, how much longer does it take?
 - If doubling the guests doubles your cooking time, that's **linear growth**
 - If doubling the guests quadruples your cooking time, that's **quadratic growth**
@@ -56,6 +58,7 @@ We use the same thinking for algorithms: How does runtime/memory grow as input s
 You might wonder: "Why not just time the algorithm with a stopwatch?"
 
 **Problems with actual timing:**
+
 1. **Hardware dependent** - Runs differently on different computers
 2. **Language dependent** - JavaScript vs C++ vs Python have different speeds
 3. **Input dependent** - Same algorithm might run differently on different inputs
@@ -66,6 +69,7 @@ You might wonder: "Why not just time the algorithm with a stopwatch?"
 ### Input Size: The Variable n
 
 In complexity analysis, we use **n** to represent the size of the input:
+
 - For an array: n = number of elements
 - For a string: n = length of string
 - For a matrix: n = number of rows (or m × n for rows × columns)
@@ -77,6 +81,7 @@ In complexity analysis, we use **n** to represent the size of the input:
 We care about **how algorithms behave as n gets very large** (approaches infinity). This is called **asymptotic analysis**.
 
 Why focus on large n?
+
 - Small inputs usually run fast anyway
 - Real-world problems often have large inputs
 - Patterns emerge at scale
@@ -91,6 +96,7 @@ Why focus on large n?
 **Think of it as:** The worst-case scenario. The "promise" that your algorithm won't be slower than this.
 
 **Example:** Finding an element in an unsorted array
+
 - Best case: Found in first position = O(1)
 - Worst case: Not found, checked all n elements = O(n)
 - **We say: O(n)** because that's the upper bound
@@ -104,6 +110,7 @@ Why focus on large n?
 **Think of it as:** The best-case scenario. The minimum time no matter how lucky we get.
 
 **Example:** Finding an element in an unsorted array
+
 - Best case: Found in first position = Ω(1)
 - **We say: Ω(1)** because that's the lower bound
 
@@ -114,6 +121,7 @@ Why focus on large n?
 **Think of it as:** When best case and worst case are the same.
 
 **Example:** Printing all elements of an array
+
 - Must visit all n elements no matter what
 - **We say: Θ(n)** because it's always n operations
 
@@ -135,18 +143,21 @@ Operations
 
 Let's see how different complexities behave with various input sizes:
 
-| Complexity | n=10 | n=100 | n=1000 | Name | Example |
-|------------|------|-------|--------|------|---------|
-| **O(1)** | 1 | 1 | 1 | Constant | Array access by index |
-| **O(log n)** | 3 | 7 | 10 | Logarithmic | Binary search |
-| **O(n)** | 10 | 100 | 1000 | Linear | Linear search |
-| **O(n log n)** | 30 | 700 | 10,000 | Linearithmic | Merge sort |
-| **O(n²)** | 100 | 10,000 | 1,000,000 | Quadratic | Bubble sort |
-| **O(n³)** | 1000 | 1,000,000 | 1,000,000,000 | Cubic | 3 nested loops |
-| **O(2ⁿ)** | 1024 | 1.27×10³⁰ | 1.07×10³⁰¹ | Exponential | Fibonacci (naive) |
-| **O(n!)** | 3,628,800 | 9.3×10¹⁵⁷ | ∞ | Factorial | Generate all permutations |
+
+| Complexity     | n=10      | n=100     | n=1000        | Name         | Example                   |
+| -------------- | --------- | --------- | ------------- | ------------ | ------------------------- |
+| **O(1)**       | 1         | 1         | 1             | Constant     | Array access by index     |
+| **O(log n)**   | 3         | 7         | 10            | Logarithmic  | Binary search             |
+| **O(n)**       | 10        | 100       | 1000          | Linear       | Linear search             |
+| **O(n log n)** | 30        | 700       | 10,000        | Linearithmic | Merge sort                |
+| **O(n²)**      | 100       | 10,000    | 1,000,000     | Quadratic    | Bubble sort               |
+| **O(n³)**      | 1000      | 1,000,000 | 1,000,000,000 | Cubic        | 3 nested loops            |
+| **O(2ⁿ)**      | 1024      | 1.27×10³⁰ | 1.07×10³⁰¹    | Exponential  | Fibonacci (naive)         |
+| **O(n!)**      | 3,628,800 | 9.3×10¹⁵⁷ | ∞             | Factorial    | Generate all permutations |
+
 
 **Key Insight:** Notice the MASSIVE difference as n grows! At n=100:
+
 - O(n) = 100 operations
 - O(n²) = 10,000 operations (100x slower!)
 - O(2ⁿ) = 1.27×10³⁰ operations (universe-lifetime slower!)
@@ -157,6 +168,7 @@ Let's see how different complexities behave with various input sizes:
 It's the number of times you can divide n by 2 until you reach 1.
 
 Examples:
+
 - log₂(8) = 3 because 8 → 4 → 2 → 1 (3 divisions)
 - log₂(1000) ≈ 10 because 1000 → 500 → 250 → ... → 1 (about 10 divisions)
 
@@ -164,6 +176,7 @@ Examples:
 Any time you repeatedly divide the problem in half (like binary search), you get O(log n).
 
 **Key properties:**
+
 - log(n) grows very slowly
 - log(1,000,000) ≈ 20 (tiny!)
 - log(n) is the "opposite" of exponential growth
@@ -242,6 +255,8 @@ graph TD
     RecType -->|Divide problem in half| Ologn2[Olog n or On log n]
     RecType -->|Two recursive calls| O2n[O2ⁿ]
 ```
+
+
 
 ---
 
@@ -517,17 +532,21 @@ function createMatrix(n) {
 ### How to Analyze Any Algorithm
 
 **Step 1: Identify the input size (n)**
+
 - What is growing? Array length? String length? Number value?
 
 **Step 2: Count operations as a function of n**
+
 - How many times do loops run?
 - How many recursive calls?
 - How many operations per iteration?
 
 **Step 3: Express in terms of n**
+
 - Write out the mathematical formula
 
 **Step 4: Simplify to Big O**
+
 - Drop constants
 - Drop lower-order terms
 - Keep only the fastest-growing term
@@ -561,12 +580,14 @@ function exampleFunction(arr) {
 ```
 
 **Analysis:**
+
 - Loop 1: n operations
 - Loop 2: n × n = n² operations
 - Loop 3: 100 operations (constant)
 - **Total: n + n² + 100**
 
 **Simplification:**
+
 - As n grows large, n² dominates
 - n + n² + 100 ≈ n² for large n
 - Drop constants and lower terms
@@ -585,6 +606,7 @@ function recursiveExample(n) {
 ```
 
 **Analysis:**
+
 - Each call makes 2 recursive calls
 - Forms a binary tree of calls
 - Tree depth: n levels
@@ -599,21 +621,24 @@ function recursiveExample(n) {
 
 **Common patterns and their complexities:**
 
-| Pattern | Complexity | Example |
-|---------|------------|---------|
-| Single operation | O(1) | `arr[i]`, `obj.prop` |
-| Single loop (1 to n) | O(n) | `for (let i = 0; i < n; i++)` |
-| Two separate loops | O(n + m) or O(n) if same | Loop 1 + Loop 2 |
-| Nested loops (2 levels) | O(n²) | `for (...) { for (...) }` |
-| Nested loops (3 levels) | O(n³) | Three nested loops |
-| Divide by 2 each time | O(log n) | Binary search |
-| Divide then process all | O(n log n) | Merge sort |
-| Two recursive branches | O(2ⁿ) | Fibonacci (naive) |
-| Loop with recursion | O(n × 2ⁿ) | Complex recursive |
+
+| Pattern                 | Complexity               | Example                       |
+| ----------------------- | ------------------------ | ----------------------------- |
+| Single operation        | O(1)                     | `arr[i]`, `obj.prop`          |
+| Single loop (1 to n)    | O(n)                     | `for (let i = 0; i < n; i++)` |
+| Two separate loops      | O(n + m) or O(n) if same | Loop 1 + Loop 2               |
+| Nested loops (2 levels) | O(n²)                    | `for (...) { for (...) }`     |
+| Nested loops (3 levels) | O(n³)                    | Three nested loops            |
+| Divide by 2 each time   | O(log n)                 | Binary search                 |
+| Divide then process all | O(n log n)               | Merge sort                    |
+| Two recursive branches  | O(2ⁿ)                    | Fibonacci (naive)             |
+| Loop with recursion     | O(n × 2ⁿ)                | Complex recursive             |
+
 
 ### Space Complexity: How Much Memory?
 
 **What counts towards space complexity:**
+
 1. ✅ Variables and data structures you create
 2. ✅ Recursive call stack
 3. ✅ Dynamic allocations (arrays, objects)
@@ -686,6 +711,7 @@ for (let i = 0; i < n; i++) {       // O(n)
 ### Pattern 1: Recognizing O(1) - Constant
 
 **Indicators:**
+
 - No loops, no recursion
 - Simple arithmetic/logic operations
 - Array access by index
@@ -702,6 +728,7 @@ const first = arr[0];
 ### Pattern 2: Recognizing O(log n) - Logarithmic
 
 **Indicators:**
+
 - Dividing input in half repeatedly
 - Binary search pattern
 - Balanced tree operations
@@ -719,6 +746,7 @@ while (left <= right) {
 ### Pattern 3: Recognizing O(n) - Linear
 
 **Indicators:**
+
 - Single loop through data
 - Visiting each element once
 - Simple recursive countdown
@@ -735,6 +763,7 @@ array.forEach(item => { });
 ### Pattern 4: Recognizing O(n log n) - Linearithmic
 
 **Indicators:**
+
 - Divide and conquer algorithms
 - Efficient sorting (merge sort, quick sort)
 - Operations that divide (log n) but process all data (n) at each level
@@ -751,6 +780,7 @@ array.forEach(item => { });
 ### Pattern 5: Recognizing O(n²) - Quadratic
 
 **Indicators:**
+
 - Two nested loops over same data
 - Comparing all pairs
 - Naive sorting algorithms
@@ -769,6 +799,7 @@ for (let i = 0; i < n; i++) {
 ### Pattern 6: Recognizing O(2ⁿ) - Exponential
 
 **Indicators:**
+
 - Multiple recursive branches
 - Generating all possibilities
 - Naive Fibonacci
@@ -793,91 +824,77 @@ function recursiveDoubleCall(n) {
 ### Easy Problems
 
 1. **O(n²) vs O(n) Analysis** - LeetCode #1: Two Sum
-   - Analyze: Nested loop solution vs hash map solution
-   - Concepts: Quadratic vs linear time, space-time tradeoff
-   - Goal: Understand how hash maps reduce time complexity
-
+  - Analyze: Nested loop solution vs hash map solution
+  - 136Concepts: Quadratic vs linear time, space-time tradeoff
+  - Goal: Understand how hash maps reduce time complexity
 2. **O(1) Space Analysis** - LeetCode #136: Single Number
-   - Analyze: XOR approach O(1) space vs hash set O(n) space
-   - Concepts: Constant space, bit manipulation benefits
-   - Goal: Recognize O(1) space algorithms
-
+  - Analyze: XOR approach O(1) space vs hash set O(n) space
+  - Concepts: Constant space, bit manipulation benefits
+  - Goal: Recognize O(1) space algorithms
 3. **In-Place Algorithms** - LeetCode #26: Remove Duplicates from Sorted Array
-   - Analyze: In-place two-pointer O(1) space vs creating new array O(n) space
-   - Concepts: Space optimization, in-place modification
-   - Goal: Understand space complexity tradeoffs
-
+  - Analyze: In-place two-pointer O(1) space vs creating new array O(n) space
+  - Concepts: Space optimization, in-place modification
+  - Goal: Understand space complexity tradeoffs
 4. **Hash Set Complexity** - LeetCode #217: Contains Duplicate
-   - Analyze: Brute force O(n²) vs hash set O(n)
-   - Concepts: When hash structures optimize time
-   - Goal: Recognize hash set use cases
-
+  - Analyze: Brute force O(n²) vs hash set O(n)
+  - Concepts: When hash structures optimize time
+  - Goal: Recognize hash set use cases
 5. **Multiple Input Variables** - LeetCode #350: Intersection of Two Arrays II
-   - Analyze: Different approaches (sorting, hash map, two pointers)
-   - Concepts: O(n+m) notation, multiple variables
-   - Goal: Analyze complexity with multiple inputs
-
+  - Analyze: Different approaches (sorting, hash map, two pointers)
+  - Concepts: O(n+m) notation, multiple variables
+  - Goal: Analyze complexity with multiple inputs
 6. **Nested Conditionals** - LeetCode #121: Best Time to Buy and Sell Stock
-   - Analyze: Brute force O(n²) vs one-pass O(n)
-   - Concepts: Recognizing optimization opportunities
-   - Goal: Analyze how tracking min/max reduces complexity
+  - Analyze: Brute force O(n²) vs one-pass O(n)
+  - Concepts: Recognizing optimization opportunities
+  - Goal: Analyze how tracking min/max reduces complexity
 
 ### Medium Problems
 
-7. **Logarithmic Complexity** - LeetCode #33: Search in Rotated Sorted Array
-   - Analyze: Why modified binary search is still O(log n)
-   - Concepts: Dividing search space, log n patterns
-   - Goal: Master log n analysis
-
-8. **Sorting vs Counting** - LeetCode #347: Top K Frequent Elements
-   - Analyze: Sorting O(n log n) vs heap O(n log k) vs bucket sort O(n)
-   - Concepts: Beating comparison sort bounds
-   - Goal: Understand when you can do better than O(n log n)
-
-9. **Space-Time Tradeoff** - LeetCode #560: Subarray Sum Equals K
-   - Analyze: O(n²) time/O(1) space vs O(n) time/O(n) space
-   - Concepts: Trading space for time
-   - Goal: Analyze and justify tradeoffs
-
-10. **Recursion Complexity** - LeetCode #70: Climbing Stairs
-    - Analyze: Naive recursion O(2ⁿ) vs memoization O(n) vs iteration O(n)
+1. **Logarithmic Complexity** - LeetCode #33: Search in Rotated Sorted Array
+  - Analyze: Why modified binary search is still O(log n)
+  - Concepts: Dividing search space, log n patterns
+  - Goal: Master log n analysis
+2. **Sorting vs Counting** - LeetCode #347: Top K Frequent Elements
+  - Analyze: Sorting O(n log n) vs heap O(n log k) vs bucket sort O(n)
+  - Concepts: Beating comparison sort bounds
+  - Goal: Understand when you can do better than O(n log n)
+3. **Space-Time Tradeoff** - LeetCode #560: Subarray Sum Equals K
+  - Analyze: O(n²) time/O(1) space vs O(n) time/O(n) space
+  - Concepts: Trading space for time
+  - Goal: Analyze and justify tradeoffs
+4. **Recursion Complexity** - LeetCode #70: Climbing Stairs
+  - Analyze: Naive recursion O(2ⁿ) vs memoization O(n) vs iteration O(n)
     - Concepts: Exponential vs linear, recursion call stack
     - Goal: Analyze recursive solutions
-
-11. **Prefix Sum Optimization** - LeetCode #238: Product of Array Except Self
-    - Analyze: Different approaches and their complexity
+5. **Prefix Sum Optimization** - LeetCode #238: Product of Array Except Self
+  - Analyze: Different approaches and their complexity
     - Concepts: O(n) single pass with clever technique
     - Goal: Recognize optimization patterns
-
-12. **Nested Loops Analysis** - LeetCode #36: Valid Sudoku
-    - Analyze: Nested loops for validation
+6. **Nested Loops Analysis** - LeetCode #36: Valid Sudoku
+  - Analyze: Nested loops for validation
     - Concepts: Analyzing nested iterations, hash set usage
     - Goal: Count operations in validation logic
 
 ### Hard Problems
 
-13. **Advanced In-Place** - LeetCode #41: First Missing Positive
-    - Analyze: How O(n) time O(1) space is achieved
+1. **Advanced In-Place** - LeetCode #41: First Missing Positive
+  - Analyze: How O(n) time O(1) space is achieved
     - Concepts: Using array indices cleverly, constant space tricks
     - Goal: Analyze advanced space optimization
-
-14. **Amortized Analysis** - LeetCode #155: Min Stack
-    - Analyze: Why all operations are amortized O(1)
+2. **Amortized Analysis** - LeetCode #155: Min Stack
+  - Analyze: Why all operations are amortized O(1)
     - Concepts: Amortized complexity vs worst-case
     - Goal: Understand amortized analysis
-
-15. **Heap Optimization** - LeetCode #23: Merge K Sorted Lists
-    - Analyze: Naive O(kn) vs heap O(n log k)
+3. **Heap Optimization** - LeetCode #23: Merge K Sorted Lists
+  - Analyze: Naive O(kn) vs heap O(n log k)
     - Concepts: Using better data structures to optimize
     - Goal: Recognize when heaps reduce complexity
-
-16. **2D DP Analysis** - LeetCode #72: Edit Distance
-    - Analyze: O(mn) time and space, then optimize to O(n) space
+4. **2D DP Analysis** - LeetCode #72: Edit Distance
+  - Analyze: O(mn) time and space, then optimize to O(n) space
     - Concepts: 2D DP table, space optimization techniques
     - Goal: Analyze DP complexity and optimize space
-
-17. **Data Structure Design** - LeetCode #295: Find Median from Data Stream
-    - Analyze: Two heaps for O(log n) insert, O(1) median
+5. **Data Structure Design** - LeetCode #295: Find Median from Data Stream
+  - Analyze: Two heaps for O(log n) insert, O(1) median
     - Concepts: Balancing operations, data structure choice
     - Goal: Analyze complex data structure designs
 
@@ -885,22 +902,24 @@ function recursiveDoubleCall(n) {
 
 **Every major concept has dedicated problems:**
 
-| Concept | Problems Covering It |
-|---------|---------------------|
-| **O(1) - Constant** | #136, #26, #155, #295 (median query) |
-| **O(log n) - Logarithmic** | #33, #23 (heap), #295 (insert) |
-| **O(n) - Linear** | #1 (hash map), #136, #26, #217, #350, #560, #238, #41, #121 (optimized) |
-| **O(n log n) - Linearithmic** | #347 (sorting), #23 (heap approach) |
-| **O(n²) - Quadratic** | #1 (brute force), #217 (brute force), #121 (brute force) |
-| **O(2ⁿ) - Exponential** | #70 (naive recursion) |
-| **Space Complexity** | All problems analyze space |
-| **Space-Time Tradeoffs** | #1, #136, #26, #560, #238 |
-| **In-Place Algorithms** | #26, #41 |
-| **Nested Loops** | #36 (validation) |
-| **Amortized Analysis** | #155 |
-| **Multiple Variables** | #350 (n+m), #72 (mn) |
-| **Recursion Analysis** | #70 |
-| **Hash Structures** | #1, #217, #350, #560 |
+
+| Concept                       | Problems Covering It                                                    |
+| ----------------------------- | ----------------------------------------------------------------------- |
+| **O(1) - Constant**           | #136, #26, #155, #295 (median query)                                    |
+| **O(log n) - Logarithmic**    | #33, #23 (heap), #295 (insert)                                          |
+| **O(n) - Linear**             | #1 (hash map), #136, #26, #217, #350, #560, #238, #41, #121 (optimized) |
+| **O(n log n) - Linearithmic** | #347 (sorting), #23 (heap approach)                                     |
+| **O(n²) - Quadratic**         | #1 (brute force), #217 (brute force), #121 (brute force)                |
+| **O(2ⁿ) - Exponential**       | #70 (naive recursion)                                                   |
+| **Space Complexity**          | All problems analyze space                                              |
+| **Space-Time Tradeoffs**      | #1, #136, #26, #560, #238                                               |
+| **In-Place Algorithms**       | #26, #41                                                                |
+| **Nested Loops**              | #36 (validation)                                                        |
+| **Amortized Analysis**        | #155                                                                    |
+| **Multiple Variables**        | #350 (n+m), #72 (mn)                                                    |
+| **Recursion Analysis**        | #70                                                                     |
+| **Hash Structures**           | #1, #217, #350, #560                                                    |
+
 
 ✅ **17 problems ensuring complete coverage of all complexity concepts!**
 
@@ -925,6 +944,7 @@ function recursiveDoubleCall(n) {
 ### Pitfall 3: Not Accounting for Hidden Complexity
 
 ❌ **Wrong:** 
+
 ```javascript
 for (let i = 0; i < n; i++) {
     arr.sort();  // "This is O(n) because one loop"
@@ -963,28 +983,26 @@ for (let i = 0; i < n; i++) {
 ### What Interviewers Look For
 
 1. **Always state complexity** after solving a problem
-   - "This solution runs in O(n) time and O(1) space"
-   
+  - "This solution runs in O(n) time and O(1) space"
 2. **Explain your reasoning**
-   - "It's O(n) because we visit each element once in the single loop"
-
+  - "It's O(n) because we visit each element once in the single loop"
 3. **Discuss tradeoffs**
-   - "We could use O(1) space but that increases time to O(n²)"
-
+  - "We could use O(1) space but that increases time to O(n²)"
 4. **Know when to optimize**
-   - If asked "Can you do better?", look for optimization opportunities
-
+  - If asked "Can you do better?", look for optimization opportunities
 5. **Recognize impossible optimizations**
-   - "We must check all elements, so we can't do better than O(n)"
+  - "We must check all elements, so we can't do better than O(n)"
 
 ### Common Interview Questions
 
 **"What's the time complexity?"**
+
 - State Big O notation
 - Explain briefly why
 - Mention best/worst case if relevant
 
 **"Can you optimize this?"**
+
 - Look for:
   - Nested loops → Can one be removed?
   - Sorting → Is sorting necessary?
@@ -992,6 +1010,7 @@ for (let i = 0; i < n; i++) {
   - Brute force → Is there a mathematical insight?
 
 **"What's the space complexity?"**
+
 - Count extra structures
 - Mention recursion stack if applicable
 - Discuss if it's necessary or can be reduced
@@ -1034,12 +1053,14 @@ O(n!)     - Generating permutations
 ### Mental Models
 
 **Time Complexity:**
+
 - "How many times do I touch the data?"
 - Single loop = O(n)
 - Nested loops = multiply complexities
 - Divide in half = add log n
 
 **Space Complexity:**
+
 - "What extra structures do I create?"
 - Variables = O(1)
 - Array of size n = O(n)
@@ -1048,6 +1069,7 @@ O(n!)     - Generating permutations
 ### Success Criteria
 
 You've mastered this topic when you can:
+
 - ✅ Analyze any algorithm's time complexity
 - ✅ Recognize common complexity patterns instantly
 - ✅ Calculate space complexity including recursion
@@ -1088,10 +1110,10 @@ You've completed the most fundamental topic in DSA! Everything from here builds 
 ---
 
 **Questions? Confused about anything? Ask your tutor for:**
+
 - More examples
 - Different explanations
 - Additional practice problems
 - Clarification on specific concepts
 
 Remember: Understanding complexity analysis is crucial. Don't move forward until you're confident!
-
