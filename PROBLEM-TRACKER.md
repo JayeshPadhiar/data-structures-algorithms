@@ -195,10 +195,47 @@ Before adding a problem to a lesson:
 
 ---
 
-### 1.5 - Sliding Window (To Be Created)
+### 1.5 - Sliding Window Pattern
+**Focus:** Fixed window, variable window, count patterns
 **Prerequisites:** 1.1, 1.2, 1.3, 1.4
+**Total Problems:** 20
 
-_Problems to be assigned..._
+**Easy:**
+- LeetCode #643 - Maximum Average Subarray I
+- LeetCode #1176 - Diet Plan Performance
+- LeetCode #1343 - Number of Sub-arrays of Size K and Average >= Threshold
+- LeetCode #2269 - Find the K-Beauty of a Number
+- LeetCode #2379 - Minimum Recolors to Get K Consecutive Black Blocks
+- LeetCode #1876 - Substrings of Size Three with Distinct Characters
+
+**Medium:**
+- LeetCode #2461 - Maximum Sum of Distinct Subarrays With Length K
+- LeetCode #1456 - Maximum Number of Vowels in a Substring of Given Length
+- LeetCode #1208 - Get Equal Substrings Within Budget
+- LeetCode #567 - Permutation in String
+- LeetCode #438 - Find All Anagrams in a String
+- LeetCode #904 - Fruit Into Baskets
+- LeetCode #1004 - Max Consecutive Ones III
+- LeetCode #209 - Minimum Size Subarray Sum
+- LeetCode #1248 - Count Number of Nice Subarrays
+- LeetCode #1052 - Grumpy Bookstore Owner
+
+**Hard:**
+- LeetCode #727 - Minimum Window Subsequence
+- LeetCode #239 - Sliding Window Maximum
+- LeetCode #30 - Substring with Concatenation of All Words
+- LeetCode #992 - Subarrays with K Different Integers
+
+**Coverage Matrix:**
+- Fixed Window (Sum/Average): #643, #1176, #1343, #1052
+- Fixed Window (Distinct/Condition): #2461, #2269, #1456, #1876, #2379
+- Fixed Window (Anagram/Frequency): #567, #438
+- Fixed Window (Deque/Advanced): #239
+- Fixed Window (Word-Level): #30
+- Variable Window (Budget/Cost): #1208
+- Variable Window (At Most k Distinct): #904, #1004
+- Variable Window (Shortest): #209, #727
+- Variable Window (Count Exactly k): #1248, #992
 
 ---
 

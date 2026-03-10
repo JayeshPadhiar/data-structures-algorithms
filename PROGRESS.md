@@ -10,30 +10,30 @@
 | Metric | Value |
 |--------|-------|
 | **Total Topics** | 119 |
-| **Completed** | 3 |
+| **Completed** | 4 |
 | **In Progress** | 0 |
-| **Remaining** | 116 |
-| **Completion Rate** | 2.5% |
-| **Estimated Hours Spent** | 18-24 |
-| **Estimated Hours Remaining** | 382-576 |
+| **Remaining** | 115 |
+| **Completion Rate** | 3.4% |
+| **Estimated Hours Spent** | 23-30 |
+| **Estimated Hours Remaining** | 377-570 |
 
 ---
 
 ## 🎯 Current Focus
 
 **Phase:** 1 - Fundamentals  
-**Topic:** 1.4 - Two Pointers Technique  
+**Topic:** 1.5 - Sliding Window Pattern  
 **Status:** Ready to Start  
 
 ---
 
 ## Phase 1: Fundamentals ⏳
-**Progress: 3/8 topics (37.5%)**
+**Progress: 4/8 topics (50%)**
 
 - [x] **1.1** Time & Space Complexity Analysis _(6-8 hours)_ ✅
 - [x] **1.2** Arrays Advanced Concepts _(6-8 hours)_ ✅
 - [x] **1.3** Strings Fundamentals _(6-8 hours)_ ✅
-- [ ] **1.4** Two Pointers Technique _(5-6 hours)_
+- [x] **1.4** Two Pointers Technique _(5-6 hours)_ ✅
 - [ ] **1.5** Sliding Window Pattern _(5-6 hours)_
 - [ ] **1.6** Hashing & Hash Maps _(4-5 hours)_
 - [ ] **1.7** Sets & Hash Sets _(3-4 hours)_
