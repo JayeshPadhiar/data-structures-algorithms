@@ -101,14 +101,67 @@ for right from 0 to n-1:
 
 **Two sub-patterns:**
 
+Both use the same template — the only difference is the order of "check validity" vs "update answer" vs "shrink".
+
+| | Longest | Shortest |
+|---|---|---|
+| Record answer when | window is valid | window is valid |
+| Then | move `right` forward | shrink `left` as far as possible |
+| Shrink happens | only to fix invalidity | aggressively while still valid |
+
+---
+
 **2a. Find LONGEST window satisfying a condition:**
+
+Goal: **maximize** window size — be greedy about expanding, reluctant to shrink.
+
 ```
-Expand right → if valid, update max → if invalid, shrink left
+Expand right → add element to window
+  → if VALID:   update max_len (this window is a candidate)
+  → if INVALID: shrink from left until valid again, then keep going
 ```
 
-**2b. Find SHORTEST window satisfying a condition:**
+> Key insight: only record the answer when the window is valid. Shrinking just restores validity — don't record anything during a shrink.
+
+**Example** — Longest substring with all unique chars (`"abcabcbb"`):
 ```
-Expand right → if valid, update min + shrink left → repeat
+→ expand: "a"    ✓  max=1
+→ expand: "ab"   ✓  max=2
+→ expand: "abc"  ✓  max=3
+→ expand: "abca" ✗  (duplicate 'a') → shrink → "bca" ✓  max stays 3
+→ expand: "bcab" ✗  → shrink → "cab" ✓
+→ expand: "cabc" ✗  → shrink → "abc" ✓
+→ expand: "abcb" ✗  → shrink → "cb"  ✓
+→ expand: "cbb"  ✗  → shrink → "b"   ✓
+Answer: 3
+```
+
+---
+
+**2b. Find SHORTEST window satisfying a condition:**
+
+Goal: **minimize** window size — be aggressive about shrinking whenever possible.
+
+```
+Expand right → add element to window
+  → if INVALID: keep expanding (don't record yet)
+  → if VALID:   record min_len, then keep shrinking left as long as still valid,
+                updating min_len each time
+```
+
+> Key insight: only record the answer when valid, then squeeze the window as small as possible before moving on.
+
+**Example** — Minimum Window Substring (`s = "ADOBECODEBANC"`, `t = "ABC"`):
+```
+→ expand until window contains A, B, C → "ADOBEC"      ✓  min=6
+→ shrink: remove 'A' → "DOBEC"                          ✗  stop shrinking
+→ keep expanding → ... → "DOBECODEBA"                   ✗
+→ keep expanding → "DOBECODEBANC"                        ✓  min=12? no...
+  shrink: remove 'D' → "OBECODEBANC" still has A,B,C   ✓  min=11
+  shrink: remove 'O' → "BECODEBANC"                    ✓  min=10
+  ... continue shrinking until invalid
+→ eventually find "BANC"                                ✓  min=4
+Answer: "BANC"
 ```
 
 **Visual (Longest substring with at most k distinct chars, k=2):**

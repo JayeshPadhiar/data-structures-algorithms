@@ -239,10 +239,48 @@ Before adding a problem to a lesson:
 
 ---
 
-### 1.6 - Hashing & Hash Maps (To Be Created)
+### 1.6 - Hashing & Hash Maps
+**Focus:** Hash map patterns — frequency, lookup, grouping, prefix sum combos
 **Prerequisites:** 1.1, 1.2, 1.3, 1.4, 1.5
+**Total Problems:** 20
 
-_Problems to be assigned..._
+**Easy:**
+- LeetCode #219 - Contains Duplicate II
+- LeetCode #13 - Roman to Integer
+- LeetCode #383 - Ransom Note
+- LeetCode #205 - Isomorphic Strings
+- LeetCode #290 - Word Pattern
+- LeetCode #2215 - Find the Difference of Two Arrays
+- LeetCode #169 - Majority Element
+
+**Medium:**
+- LeetCode #451 - Sort Characters By Frequency
+- LeetCode #128 - Longest Consecutive Sequence
+- LeetCode #523 - Continuous Subarray Sum
+- LeetCode #692 - Top K Frequent Words
+- LeetCode #525 - Contiguous Array
+- LeetCode #554 - Brick Wall
+- LeetCode #535 - Encode and Decode TinyURL
+- LeetCode #791 - Custom Sort String
+- LeetCode #442 - Find All Duplicates in an Array
+
+**Hard:**
+- LeetCode #159 - Longest Substring with At Most Two Distinct Characters
+- LeetCode #146 - LRU Cache
+- LeetCode #340 - Longest Substring with At Most K Distinct Characters
+- LeetCode #380 - Insert Delete GetRandom O(1)
+
+**Coverage Matrix:**
+- Frequency Counter: #383, #2215, #169, #442, #451, #692
+- Index Tracking / Lookup: #219, #13
+- Bijection / Mapping: #205, #290
+- Prefix Sum + Hash Map: #523, #525, #554
+- Hash Map + Sliding Window: #159, #340
+- Hash Map + Data Structure Combo: #146, #380
+- Custom Ordering: #791
+- Sequence Finding: #128
+- In-Place Hashing: #442
+- System Design: #535, #146
 
 ---
 
