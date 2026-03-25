@@ -284,10 +284,46 @@ Before adding a problem to a lesson:
 
 ---
 
-### 1.7 - Sets & Hash Sets (To Be Created)
+### 1.7 - Sets & Hash Sets
+**Focus:** Set operations, deduplication, membership, constraint tracking
 **Prerequisites:** 1.1, 1.2, 1.3, 1.4, 1.5, 1.6
+**Total Problems:** 17
 
-_Problems to be assigned..._
+**Easy:**
+- LeetCode #349 - Intersection of Two Arrays
+- LeetCode #268 - Missing Number
+- LeetCode #1436 - Destination City
+- LeetCode #771 - Jewels and Stones
+- LeetCode #1207 - Unique Number of Occurrences
+- LeetCode #929 - Unique Email Addresses
+
+**Medium:**
+- LeetCode #645 - Set Mismatch
+- LeetCode #720 - Longest Word in Dictionary
+- LeetCode #260 - Single Number III
+- LeetCode #804 - Unique Morse Code Words
+- LeetCode #575 - Distribute Candies
+- LeetCode #1657 - Determine if Two Strings Are Close
+- LeetCode #819 - Most Common Word
+- LeetCode #1695 - Maximum Erasure Value
+
+**Hard:**
+- LeetCode #220 - Contains Duplicate III
+- LeetCode #694 - Number of Distinct Islands
+- LeetCode #939 - Minimum Area Rectangle
+
+**Coverage Matrix:**
+- Deduplication: #929, #804
+- Membership Test: #771, #819
+- Set Intersection: #349
+- Set Difference / Missing: #268, #645, #1436
+- Frequency Uniqueness: #1207, #1657
+- Prefix Validation: #720
+- Set + Sliding Window: #1695
+- Set as Toggle: #260, #575
+- Serialized Keys: #694
+- Coordinate Pairs: #939
+- Bucket / Range Set: #220
 
 ---
 
